@@ -32,14 +32,22 @@
     border: rgb(255, 0, 0) 5px solid;
 }
 
-/* @media only screen and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
+    .img-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .img-container:nth-child(2n+1) {
         border: rgb(255, 0, 0) 5px solid;
     }
 }
 
 @media only screen and (max-width: 500px) {
+    .img-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
     .img-container {
         border: rgb(255, 0, 0) 5px solid;
     }
-} */
+}
