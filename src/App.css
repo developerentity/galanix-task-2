@@ -14,7 +14,13 @@
 
 .img-container {
     display: block;
-    border: rgb(68, 68, 68) 5px solid;
+    border : rgb(68, 68, 68) 5px solid;
+}
+
+.img-container:hover {
+    border    : rgb(235, 213, 22) 5px solid !important;
+    transform : rotate(45deg);
+    transition: 1s;
 }
 
 .img {
