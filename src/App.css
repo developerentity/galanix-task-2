@@ -10,11 +10,17 @@
     display              : grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap             : 10px;
+    width                : 100%;
 }
 
 .img-container {
-    display: block;
-    border : rgb(68, 68, 68) 5px solid;
+    display      : block;
+    border       : rgb(68, 68, 68) 5px solid;
+    border-radius: 50%;
+    width        : 150px;
+    height       : 150px;
+    overflow     : hidden;
+    margin       : 0 auto;
 }
 
 .img-container:hover {
