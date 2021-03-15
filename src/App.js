@@ -1,12 +1,12 @@
 import './App.css'
-import { imagesArr } from './imagesCombiner';
+import { imagesArr } from './img/imagesCombiner';
 
 
 const App = () => {
 
   const imagesList = imagesArr.map(img => {
     return (
-      <div className='img-container'>
+      <div className='img-container' key={img.id}>
         <img className='img' src={img.src} alt={`img ${img.id}`} />
       </div>
     )
