@@ -2,6 +2,7 @@ import './App.css'
 import Footer from './elements/Footer';
 import Header from './elements/Header';
 import ImageItem from './elements/ImageItem';
+import ModalPage from './elements/ModalPage';
 import { imagesArr } from './img/imagesCombiner';
 
 
@@ -15,6 +16,8 @@ const App = () => {
       <main className="main-container">
         <div className='img-list'>
           {imagesList}
+          <ModalPage
+            img={imagesArr[0]} />
         </div>
       </main>
       <Footer />
