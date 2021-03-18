@@ -1,10 +1,14 @@
 import React from 'react'
 
-const ImageItem = ({ img }) => {
+const ImageItem = ({ img, setModalImage }) => {
 
     return (
         <div className='img-container' key={img.id}>
-            <img className='img' src={img.src} alt={`img ${img.id}`} />
+            <img
+                onClick={() => setModalImage(img)}
+                className='img'
+                src={img.src}
+                alt={`img ${img.id}`} />
             <button type="button" className="close btn-remove">
                 <span aria-hidden="true">&times;</span>
             </button>

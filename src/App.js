@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './App.css'
 import Footer from './elements/Footer';
 import Header from './elements/Header';
@@ -8,7 +9,13 @@ import { imagesArr } from './img/imagesCombiner';
 
 const App = () => {
 
-  const imagesList = imagesArr.map(img => <ImageItem key={img.id} img={img} />)
+  const [modalImage, setModalImage] = useState(null)
+  const imagesList = imagesArr.map(img => {
+    return <ImageItem
+      key={img.id}
+      img={img}
+      setModalImage={setModalImage} />
+  })
 
   return (
     <>
@@ -16,11 +23,13 @@ const App = () => {
       <main className="main-container">
         <div className='img-list'>
           {imagesList}
-          <ModalPage
-            img={imagesArr[0]} />
         </div>
       </main>
       <Footer />
+      {modalImage &&
+        <ModalPage
+          img={modalImage}
+          close={setModalImage} />}
     </>
   );
 }
