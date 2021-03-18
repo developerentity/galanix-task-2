@@ -3,10 +3,8 @@ import React, { useEffect, useState } from 'react'
 
 const Clock = () => {
 
-    const options = { year: '2-digit', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' }
-    const [time, setTime] = useState(new Date().toLocaleString([], options))
-
-    const tick = () => setTime(new Date().toLocaleString([], options))
+    const [time, setTime] = useState(new Date().toLocaleString())
+    const tick = () => setTime(new Date().toLocaleString())
 
     useEffect(() => {
         let timerId = setInterval(
@@ -18,7 +16,7 @@ const Clock = () => {
 
     return (
         <div className='clock'>
-            {time}
+            {time.slice(0, 17)}
         </div>
     );
 }
